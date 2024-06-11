@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp9.mybootapp9;
+package jp.te4a.spring.boot.myapp11.mybootapp11;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,14 +15,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookBean {
-@Id
-@GeneratedValue
-private Integer id ;
-@Column(nullable = false)
-private String title;
-private String writter;
-private String publisher;
-private Integer price;
+    @Id
+    @GeneratedValue
+    private Integer id;
+    @Column(nullable = false)
+    private String title;
+    private String writter;
+    private String publisher;
+    private Integer price;
 }
-
-
