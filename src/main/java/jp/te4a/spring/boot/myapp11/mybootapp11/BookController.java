@@ -1,7 +1,5 @@
 package jp.te4a.spring.boot.myapp11.mybootapp11;
 
-import javax.naming.Binding;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,7 +32,7 @@ public class BookController {
   @PostMapping(path = "create")
   String create(@Validated BookForm form, BindingResult result, Model mode) {
     if (result.hasErrors()) {
-      return list(model);
+      return list(mode);
     }
     bookService.create(form);
     return "redirect:/books";
