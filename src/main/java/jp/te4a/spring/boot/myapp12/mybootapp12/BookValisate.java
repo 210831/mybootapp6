@@ -1,8 +1,8 @@
-package jp.te4a.spring.boot.myapp11.mybootapp11;
+package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import jp.te4a.spring.boot.myapp11.mybootapp11.BookValid.TestValid;
+import jp.te4a.spring.boot.myapp12.mybootapp12.BookValid.TestValid;
 
 public class BookValisate implements ConstraintValidator<TestValid, String> {
 

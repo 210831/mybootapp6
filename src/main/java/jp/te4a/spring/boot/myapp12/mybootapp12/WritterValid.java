@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp11.mybootapp11;
+package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,16 +9,17 @@ import java.lang.annotation.Target;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
-public class BookValid {
+public class WritterValid {
+
     @Documented
-    @Constraint(validatedBy = BookValisate.class)
+    @Constraint(validatedBy = WritterValisate.class)
     @Target({ ElementType.METHOD, ElementType.FIELD })
     @Retention(RetentionPolicy.RUNTIME)
-    public @interface TestValid {
+    public @interface Writter {
 
-        String param();
+        String ok();
 
-        String message() default "input other than {param}.";
+        String message() default "input only {ok}.";
 
         // Classオブジェクトを得る（戻り値とする）メソッドgroups()
         // デフォルト値は空のクラス
@@ -29,4 +30,5 @@ public class BookValid {
         Class<? extends Payload>[] payload() default {};
 
     }
+
 }
